@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --beige-light: #F5F1EA;
+    --border: #ddd;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate-black); margin-bottom: 14px; }
+  .perceptions-moments { display: grid; grid-template-columns: 220px 1fr; border-top: 2px solid var(--slate-black); border-bottom: 1px solid var(--border); }
+  .perceptions { background: var(--beige-light); padding: 20px 18px; border-right: 1px solid var(--border); }
+  .perception-item { display: flex; gap: 9px; margin-bottom: 10px; align-items: flex-start; }
+  .perception-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+  .perception-item h4 { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: var(--slate-black); text-transform: uppercase; }
+  .perception-item p { font-size: 10px; color: #555; line-height: 1.4; }
+  .moments { padding: 20px 22px; }
+  .moments-title { font-size: 14px; font-weight: 700; color: var(--slate-black); text-transform: uppercase; margin-bottom: 14px; }
+  .moments-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .moment-placeholder { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #d0c8be 0%, #b8afa5 100%); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .moment-item p { font-size: 9px; color: #555; margin-top: 5px; text-align: center; line-height: 1.3; }
+</style>
+</head>
+<body>
+<div class="perceptions-moments">
+  <div class="perceptions">
+    <div class="section-label">Perceptions clés</div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#8B1E1E" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+      <div><h4>Clarté</h4><p>Comprendre sa situation, sécuriser ses choix.</p></div>
+    </div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#8B1E1E" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div><h4>Crédibilité</h4><p>Un système structuré, exigeant et transparent.</p></div>
+    </div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#C9983C" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      <div><h4>Progression</h4><p>Chaque étape rapproche de votre objectif.</p></div>
+    </div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#8B1E1E" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <div><h4>Stabilité</h4><p>Des parcours solides, alignés avec l'Allemagne.</p></div>
+    </div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#8B1E1E" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <div><h4>Confiance</h4><p>Un accompagnement humain, à chaque étape.</p></div>
+    </div>
+    <div class="perception-item">
+      <svg class="perception-icon" viewBox="0 0 24 24" fill="none" stroke="#C9983C" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <div><h4>Sophistication calme</h4><p>Un environnement premium, clair et rassurant.</p></div>
+    </div>
+  </div>
+  <div class="moments">
+    <div class="moments-title">Des moments réels. Une trajectoire crédible.</div>
+    <div class="moments-grid">
+      {[1,2,3,4,5,6].map(i => `
+      <div class="moment-item">
+        <div class="moment-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        </div>
+        <p>Action ${i} du parcours.</p>
+      </div>`).join('')}
+    </div>
+  </div>
+</div>
+</body>
+</html>

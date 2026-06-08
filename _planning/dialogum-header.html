@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --white: #FFFFFF;
+    --beige-light: #F5F1EA;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; }
+  .header { display: grid; grid-template-columns: 1fr 1fr; min-height: 280px; }
+  .header-left { padding: 28px 32px 24px; background: #fff; }
+  .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+  .logo-icon { width: 38px; height: 38px; }
+  .logo-text strong { display: block; font-size: 20px; font-weight: 800; letter-spacing: 1px; color: var(--slate-black); }
+  .logo-text span { font-size: 8.5px; font-weight: 600; letter-spacing: 0.5px; color: var(--radial-gold); text-transform: uppercase; }
+  .header-tagline { font-size: 28px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; color: var(--slate-black); text-transform: uppercase; }
+  .header-tagline span { color: var(--deep-red); }
+  .header-desc { font-size: 12px; color: #444; margin-bottom: 20px; line-height: 1.55; }
+  .header-icons { display: flex; gap: 28px; margin-top: 10px; }
+  .header-icon-item { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 10px; color: #444; text-align: center; }
+  .header-icon-item svg { width: 26px; height: 26px; color: var(--slate-black); }
+  .header-right { position: relative; overflow: hidden; background: var(--beige-light); }
+  .header-quote { position: absolute; top: 22px; left: 24px; background: rgba(255,255,255,0.92); padding: 16px 18px; max-width: 230px; border-radius: 2px; }
+  .header-quote::before { content: '\201C'; font-size: 42px; color: var(--deep-red); line-height: 0.6; display: block; margin-bottom: 8px; }
+  .header-quote p { font-size: 13px; line-height: 1.5; color: var(--slate-black); }
+  .header-quote strong { color: var(--deep-red); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-left">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" fill="#0F1A23" rx="2"/>
+        <path d="M8 8 L8 20 L20 20" stroke="#C9983C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M8 20 L22 20 L30 8" stroke="#8B1E1E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M14 14 L14 30" stroke="#C9983C" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </svg>
+      <div class="logo-text">
+        <strong>DIALOGUM</strong>
+        <span>Le parcours clair vers l'Allemagne</span>
+      </div>
+    </div>
+    <div class="header-tagline">DU FLOU À LA CLARTÉ.<br>DE L'HÉSITATION À LA <span>TRAJECTOIRE.</span></div>
+    <div class="header-desc">Dialogum transforme une situation confuse<br>en un projet structuré, compréhensible et crédible<br>vers l'Allemagne.</div>
+    <div class="header-icons">
+      <div class="header-icon-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        Plus de clarté
+      </div>
+      <div class="header-icon-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+        Orientation adaptée
+      </div>
+      <div class="header-icon-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        Progression structurée
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="header-quote">
+      <p>Ce n'est pas juste<br>un départ.<br>C'est une <strong>trajectoire</strong><br>que vous construisez.</p>
+    </div>
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#d0c5b5 0%,#a89880 40%,#7a6855 100%);"></div>
+  </div>
+</div>
+</body>
+</html>

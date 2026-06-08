@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --border: #ddd;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; padding: 20px; }
+  .features { display: grid; grid-template-columns: repeat(4, 1fr) auto; padding: 22px 28px; gap: 16px; border-bottom: 1px solid var(--border); align-items: start; }
+  .feature-item svg { width: 28px; height: 28px; color: var(--slate-black); margin-bottom: 8px; }
+  .feature-item h4 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; color: var(--slate-black); }
+  .feature-item p { font-size: 10px; color: #555; line-height: 1.4; }
+  .guarantee-box { border: 2px solid var(--radial-gold); padding: 14px 16px; max-width: 220px; position: relative; }
+  .guarantee-label { background: var(--radial-gold); color: #fff; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 10px; }
+  .guarantee-label svg { width: 12px; height: 12px; }
+  .guarantee-box h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; line-height: 1.3; color: var(--deep-red); }
+  .guarantee-box p { font-size: 10px; color: #555; line-height: 1.4; margin-bottom: 7px; }
+  .guarantee-box ul { list-style: none; }
+  .guarantee-box ul li { font-size: 10px; color: #444; display: flex; align-items: flex-start; gap: 5px; margin-bottom: 3px; }
+  .guarantee-box ul li::before { content: '✓'; color: var(--deep-red); font-weight: 700; }
+  .guarantee-stamp { position: absolute; bottom: -14px; right: -14px; width: 64px; height: 64px; background: var(--deep-red); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--deep-red); }
+  .guarantee-stamp span { font-size: 6.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; text-align: center; line-height: 1.3; }
+  .guarantee-stamp svg { width: 16px; height: 16px; }
+</style>
+</head>
+<body>
+<div class="features">
+  <div class="feature-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+    <h4>Accompagnement complet</h4><p>De la formation au placement et intégration</p>
+  </div>
+  <div class="feature-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    <h4>Expertise pédagogique</h4><p>+30 ans d'expertise pédagogique.</p>
+  </div>
+  <div class="feature-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <h4>Réseau de partenaires</h4><p>Cliniques, universités, entreprises, centres de formation</p>
+  </div>
+  <div class="feature-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    <h4>Suivi personnalisé</h4><p>Approche individuelle pour garantir votre réussite</p>
+  </div>
+  <div class="guarantee-box">
+    <div class="guarantee-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantie unique</div>
+    <h4>Pour les infirmiers</h4><p>Remboursement des frais si B1 obtenu et entretien réussi.</p>
+    <ul><li>Les frais de cours de langue</li><li>Les frais de procédure de visa</li></ul>
+    <div class="guarantee-stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>GARANTIE<br>SATISFACTION</span></div>
+  </div>
+</div>
+</body>
+</html>

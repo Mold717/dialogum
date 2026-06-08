@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --beige-light: #F5F1EA;
+    --border: #ddd;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; padding: 20px; }
+  .pipeline { background: #fff; padding: 24px 28px; border-bottom: 1px solid var(--border); }
+  .pipeline-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
+  .pipeline-steps { display: grid; grid-template-columns: repeat(6, 1fr) auto; gap: 0; align-items: start; }
+  .pipeline-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; }
+  .pipeline-step:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 16px; font-size: 16px; color: var(--deep-red); font-weight: 300; }
+  .step-num { font-size: 10px; font-weight: 700; color: var(--slate-black); margin-bottom: 5px; align-self: flex-start; margin-left: 18px; }
+  .step-circle { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  .step-circle.dark { background: var(--slate-black); }
+  .step-circle.red  { background: var(--deep-red); }
+  .step-circle.gold { background: var(--radial-gold); }
+  .step-circle svg  { width: 22px; height: 22px; color: #fff; }
+  .step-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .step-desc { font-size: 9.5px; color: #666; line-height: 1.3; }
+  .pipeline-note { background: var(--beige-light); border: 1px solid var(--border); padding: 10px 12px; max-width: 130px; text-align: center; align-self: center; margin-left: 16px; }
+  .pipeline-note svg { color: var(--deep-red); width: 20px; height: 20px; margin-bottom: 5px; }
+  .pipeline-note p { font-size: 9.5px; line-height: 1.35; color: #444; }
+  .pipeline-note strong { color: var(--slate-black); display: block; font-size: 10px; }
+</style>
+</head>
+<body>
+<div class="pipeline">
+  <div class="pipeline-title">Notre pipeline opérationnel</div>
+  <div class="pipeline-steps">
+    <div class="pipeline-step">
+      <div class="step-num">01</div>
+      <div class="step-circle dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg></div>
+      <div class="step-label">Orientation</div><div class="step-desc">Comprendre votre situation actuelle</div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">02</div>
+      <div class="step-circle red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <div class="step-label">Préparation</div><div class="step-desc">Structurer votre dossier et votre profil</div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">03</div>
+      <div class="step-circle gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+      <div class="step-label">Matching</div><div class="step-desc">Aligner avec les meilleures opportunités</div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">04</div>
+      <div class="step-circle dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="step-label">Validation</div><div class="step-desc">Vérifier et sécuriser votre parcours</div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">05</div>
+      <div class="step-circle red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg></div>
+      <div class="step-label">Départ</div><div class="step-desc">Organiser votre départ sereinement</div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">06</div>
+      <div class="step-circle gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+      <div class="step-label">Intégration</div><div class="step-desc">Vous accompagner dans la durée</div>
+    </div>
+    <div class="pipeline-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <p><strong>Un système exigeant et bienveillant.</strong><br>Seuls les profils alignés avec les critères sont accompagnés.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

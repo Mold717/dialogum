@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --border: #ddd;
+    --beige-light: #F5F1EA;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; padding: 20px; }
+  .footer-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid var(--border); padding: 20px 28px; gap: 20px; }
+  .cibles h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .cible-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 7px; }
+  .cible-item svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; color: var(--slate-black); }
+  .cible-item div { font-size: 10px; color: #444; line-height: 1.35; }
+  .cible-item div strong { display: block; font-size: 10px; font-weight: 600; color: var(--slate-black); }
+  .entrer { background: var(--beige-light); padding: 22px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .entrer h2 { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .entrer p { font-size: 11px; color: #555; margin-bottom: 16px; }
+  .btn-cta { background: var(--deep-red); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 12px 24px; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; border-radius: 2px; text-decoration: none; }
+  .principes h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .principe-item { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+  .principe-item svg { width: 15px; height: 15px; color: var(--slate-black); flex-shrink: 0; }
+  .principe-item span { font-size: 10.5px; color: #444; font-weight: 500; }
+  .palette-row { display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 20px; padding: 14px 28px; border-top: 1px solid var(--border); background: #fff; align-items: center; }
+  .palette-section h5 { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: #888; }
+  .palette-swatches { display: flex; gap: 6px; }
+  .swatch { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .swatch-color { width: 32px; height: 32px; border-radius: 2px; border: 1px solid rgba(0,0,0,0.1); }
+  .swatch span { font-size: 8px; color: #888; font-family: monospace; }
+  .palette-section p { font-size: 10px; color: #555; }
+  .palette-section .typo-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+  .palette-section .typo-weights { font-size: 9px; color: #888; }
+  .ambiance ul { list-style: none; }
+  .ambiance ul li { font-size: 10px; color: #555; margin-bottom: 2px; display: flex; align-items: center; gap: 5px; }
+  .ambiance ul li::before { content: '·'; font-size: 16px; color: var(--deep-red); }
+</style>
+</head>
+<body>
+<div class="footer-bottom">
+  <div class="cibles">
+    <h4>Nos cibles</h4>
+    <div class="cible-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><div><strong>Professionnels de santé</strong>(infirmiers, médical)</div></div>
+    <div class="cible-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><div><strong>Étudiants</strong>(Universités & Ausbildung)</div></div>
+    <div class="cible-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg><div><strong>Mobilité Pro</strong>(conversions & évolution)</div></div>
+  </div>
+  <div class="entrer">
+    <h2>Entrer dans le système</h2><p>Qualification structurée obligatoire.</p>
+    <a href="#" class="btn-cta">Accéder au système →</a>
+  </div>
+  <div class="principes">
+    <h4>Nos principes</h4>
+    <div class="principe-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Accès conditionné</span></div>
+    <div class="principe-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Progression séquencée</span></div>
+  </div>
+</div>
+<div class="palette-row">
+  <div class="palette-section">
+    <h5>Couleurs</h5>
+    <div class="palette-swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#0F1A23;"></div><span>#0F1A23</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#8B1E1E;"></div><span>#8B1E1E</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#C9983C;"></div><span>#C9983C</span></div>
+    </div>
+  </div>
+  <div class="palette-section ambiance" style="border-left:1px solid var(--border);padding-left:20px;">
+    <h5>Ambiance</h5>
+    <ul><li>Clarté · Structure · Sérénité</li><li>Authenticité · Ambition</li></ul>
+  </div>
+</div>
+</body>
+</html>

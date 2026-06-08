@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --slate-black: #0F1A23;
+    --deep-red: #8B1E1E;
+    --radial-gold: #C9983C;
+    --beige-light: #F5F1EA;
+    --border: #ddd;
+  }
+  body { font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.45; padding: 20px; }
+  .parcours { display: grid; grid-template-columns: 1fr 1fr 1fr auto; border-top: 2px solid var(--slate-black); border-bottom: 1px solid var(--border); }
+  .parcours-card { padding: 18px 20px 16px; border-right: 1px solid var(--border); }
+  .parcours-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 10px 12px; border-radius: 3px; }
+  .parcours-card-header.emploi { background: var(--deep-red); }
+  .parcours-card-header.ausbildung { background: var(--radial-gold); }
+  .parcours-card-header.etudes { background: var(--slate-black); }
+  .parcours-card-header svg { width: 22px; height: 22px; color: #fff; }
+  .parcours-card-header h3 { color: #fff; font-size: 14px; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
+  .parcours-card-header h3 span { display: block; font-size: 9px; font-weight: 400; opacity: 0.85; }
+  .parcours-list { list-style: none; margin-bottom: 14px; }
+  .parcours-list li { display: flex; align-items: flex-start; gap: 7px; font-size: 10.5px; color: #444; margin-bottom: 5px; line-height: 1.3; }
+  .parcours-list li::before { content: '⊘'; font-size: 11px; flex-shrink: 0; margin-top: 0px; }
+  .parcours-list.red li::before { color: var(--deep-red); }
+  .parcours-list.gold li::before { color: var(--radial-gold); }
+  .parcours-list.dark li::before { color: var(--slate-black); }
+  .decouvrir { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; margin-top: 4px; }
+  .decouvrir.red { color: var(--deep-red); }
+  .decouvrir.gold { color: var(--radial-gold); }
+  .decouvrir.dark { color: var(--slate-black); }
+  .parcours-priority { padding: 18px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--beige-light); min-width: 120px; }
+  .parcours-priority svg { width: 28px; height: 28px; color: var(--deep-red); margin-bottom: 10px; }
+  .parcours-priority h4 { font-size: 11.5px; font-weight: 700; margin-bottom: 8px; }
+  .parcours-priority p { font-size: 10px; color: #555; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="parcours">
+  <div class="parcours-card">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:#888;">Nos parcours d'accès</div>
+    <div class="parcours-card-header emploi">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      <h3>Emploi<span>Allemagne</span></h3>
+    </div>
+    <ul class="parcours-list red"><li>Contrats de travail en Allemagne</li><li>Profils qualifiés & opérationnels</li><li>Métiers en tension</li><li>Placement rapide & sécurisé</li></ul>
+    <a href="#" class="decouvrir red">Découvrir le parcours <span>→</span></a>
+  </div>
+  <div class="parcours-card">
+    <div style="height:22px;"></div>
+    <div class="parcours-card-header ausbildung">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <h3>Ausbildung<span>Formation professionnelle</span></h3>
+    </div>
+    <ul class="parcours-list gold"><li>Formation en alternance rémunérée</li><li>Métiers d'avenir</li><li>Apprentissage structuré</li><li>Insertion durable</li></ul>
+    <a href="#" class="decouvrir gold">Découvrir le parcours <span>→</span></a>
+  </div>
+  <div class="parcours-card">
+    <div style="height:22px;"></div>
+    <div class="parcours-card-header etudes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <h3>Études<span>Parcours académique en Allemagne</span></h3>
+    </div>
+    <ul class="parcours-list dark"><li>Universités allemandes</li><li>Orientation académique</li><li>Constitution du dossier</li><li>Préparation linguistique</li></ul>
+    <a href="#" class="decouvrir dark">Découvrir le parcours <span>→</span></a>
+  </div>
+  <div class="parcours-priority">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <h4>Notre priorité :<br>votre trajectoire.</h4>
+    <p>Clarté aujourd'hui,<br>stabilité demain,<br>avenir durable.</p>
+  </div>
+</div>
+</body>
+</html>

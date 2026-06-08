@@ -3,7 +3,7 @@
   "framework": "nextjs",
   "buildCommand": "next build",
   "installCommand": "npm install",
-  "devCommand": "next dev",
+  "devCommand": "next dev -p 3020",
   "regions": ["cdg1"],
   "cleanUrls": true
 }

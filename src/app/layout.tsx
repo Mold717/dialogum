@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Outfit, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -19,7 +18,7 @@ const cormorantGaramond = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: "Dialogum | Accompagnement Institutionnel vers l'Allemagne",
-  description: "Construisez une trajectoire claire, structurée et certifiée vers l'Allemagne avec l'expertise Dialogum.",
+  description: "Construisez une trajectoire claire, structurée et certifiée vers l'Allemagne with l'expertise Dialogum.",
 };
 
 export default function RootLayout({
@@ -30,13 +29,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${outfit.variable} ${cormorantGaramond.variable}`}>
       <body
-        className="antialiased font-sans bg-brand-white text-brand-slate selection:bg-brand-red/10 selection:text-brand-red"
+        className="antialiased font-sans bg-brand-white text-brand-slate selection:bg-brand-red/10 selection:text-brand-red overflow-x-hidden"
       >
         <Navbar />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );

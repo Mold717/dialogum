@@ -1,12 +1,4 @@
 import Hero from '@/components/home/Hero';
-import Problem from '@/components/home/Problem';
-import Situations from '@/components/home/Situations';
-import Clarity from '@/components/home/Clarity';
-import Pipeline from '@/components/home/Pipeline';
-import FAQ from '@/components/home/FAQ';
-import Info from '@/components/home/Info';
-import FinalCTA from '@/components/home/FinalCTA';
-import TrustQuote from '@/components/home/TrustQuote';
 
 export default function Home() {
   return (
@@ -17,14 +9,6 @@ export default function Home() {
 
       <div className="relative z-10 flex flex-col">
         <Hero />
-        <Problem />
-        <Situations />
-        <Clarity />
-        <Pipeline />
-        <FAQ />
-        <Info />
-        <FinalCTA />
-        <TrustQuote />
       </div>
     </div>
   );
